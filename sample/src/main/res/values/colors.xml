@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#faf9de</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="darkGray">#A9A9A9</color><!--暗灰色 -->
+    <color name="darkgray">#DCDCDC</color>
+    <color name="lightgray">#f2f2f2</color>
+    <color name="lightGreen">#00c7b7</color>
+    <color name="lightYellow">#FF8C00</color>
+    <color name="orange">#f37810</color>
+    <color name="orange2">#f78c0f</color>
+    <color name="title_bar_background">#012742</color>
+    <color name="leftlist_item_normal">#faf9de</color>
+    <color name="split_line">#f37810</color>
+    <color name="red" >#ff0000</color>
+
+
+</resources>

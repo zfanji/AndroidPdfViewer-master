@@ -1,0 +1,3 @@
+include ':flipview-library'
+include ':sample'
+project(':flipview-library').projectDir = new File('flipviewlibrary')

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Book Demo</string>
+    <string name="pick_file">Pick file</string>
+    <string name="toast_pick_file_error">Unable to pick file. Check status of file manager.</string>
+    <string name="first">First</string>
+    <string name="last">Last</string>
+    <string name="prepend">Prepend</string>
+</resources>
