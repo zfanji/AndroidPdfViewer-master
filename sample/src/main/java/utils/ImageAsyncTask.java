@@ -301,6 +301,11 @@ public class ImageAsyncTask {
 		PdfiumCore pdfiumCore = new PdfiumCore(singleton.getApplicationContext());
 		try {
 			PdfDocument pdfDocument = pdfiumCore.newDocument(fd);
+			if(pageNum>=singleton.urls.get(index).getPages()){
+				return null;
+			}
+			if(pageNum<0)
+				pageNum=0;
 
 			pdfiumCore.openPage(pdfDocument, pageNum);
 

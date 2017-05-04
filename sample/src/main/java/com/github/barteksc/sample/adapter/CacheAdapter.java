@@ -148,7 +148,7 @@ public class CacheAdapter extends BaseAdapter {
             });
 
          //   Log.d(TAG,""+itemWidth+"--"+itemHeight);
-            downloader.download(holder.icon, position,itemWidth,itemHeight,0);
+            downloader.download(holder.icon, position,itemWidth,itemHeight,-1);
 
             this.singleton.urls.get(position).setSaveView(convertView);
         }
