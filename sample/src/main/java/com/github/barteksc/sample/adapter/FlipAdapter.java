@@ -20,6 +20,7 @@ public class FlipAdapter extends BaseAdapter implements OnClickListener {
 
 	private ImageDownloader downloader;
 	private int itemWidth;
+	private int itemHeight;
 	private int pdfIndex;
 
 	public interface Callback{
@@ -54,9 +55,11 @@ public class FlipAdapter extends BaseAdapter implements OnClickListener {
 
 	private List<Item> items = new ArrayList<Item>();
 	
-	public FlipAdapter(Context context,int pdfindex) {
+	public FlipAdapter(Context context,int pdfindex,int width,int height) {
 		this.downloader = new ImageDownloader();
 		this.pdfIndex = pdfindex;
+		this.itemWidth = width;
+		this.itemHeight = height;
 		inflater = LayoutInflater.from(context);
 	}
 
@@ -102,8 +105,8 @@ public class FlipAdapter extends BaseAdapter implements OnClickListener {
 
 
 
-		downloader.download(holder.img_left, pdfIndex,480,800,position*2);
-		downloader.download(holder.img_right, pdfIndex, 480, 800, position * 2 + 1);
+		downloader.download(holder.img_left, pdfIndex,itemWidth,itemHeight,position*2);
+		downloader.download(holder.img_right, pdfIndex, itemWidth, itemHeight, position * 2 + 1);
 
 		return convertView;
 	}

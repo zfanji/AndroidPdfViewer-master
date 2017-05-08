@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -34,7 +35,12 @@ public class PdfActivity extends Activity implements FlipAdapter.Callback, OnFli
         pdfindex=intent.getExtras().getInt("pdfindex");
 
 		mFlipView = (FlipView) findViewById(R.id.flip_view);
-		mAdapter = new FlipAdapter(this,pdfindex);
+
+
+		DisplayMetrics metrics = getApplicationContext().getResources().getDisplayMetrics();
+		int width=metrics.widthPixels*50/100;
+		int height=metrics.heightPixels;
+		mAdapter = new FlipAdapter(this,pdfindex,width,height);
 		int pageCount = singleton.urls.get(pdfindex).getPages();
 		int i = singleton.urls.get(pdfindex).getPages()%2;
 		Log.d("111", "2333333 pageCount = " + pageCount + ", iii v= "+(pageCount/2 + i));
