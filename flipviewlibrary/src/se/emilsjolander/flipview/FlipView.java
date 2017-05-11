@@ -1039,7 +1039,7 @@ public class FlipView extends FrameLayout {
 		mPeakAnim.setDuration(PEAK_ANIM_DURATION);
 		mPeakAnim.setRepeatMode(ValueAnimator.REVERSE);
 		mPeakAnim.setRepeatCount(once ? 1 : ValueAnimator.INFINITE);
-		mPeakAnim.start();
+	//	mPeakAnim.start();
 	}
 
 	private void trackVelocity(MotionEvent ev) {

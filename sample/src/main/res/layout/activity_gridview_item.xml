@@ -13,7 +13,7 @@
         android:layout_gravity="center_horizontal"
         android:scaleType="fitXY"
         android:background="#fff"
-        android:src="@drawable/itembg"
+        android:src="@drawable/itempdf"
         android:elevation="15dp"/>
 
 
