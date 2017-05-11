@@ -104,11 +104,11 @@ public class ImageAsyncTask {
         // If you can't find in the disk Cache, then you really download.
 		url = singleton.urls.get(index).getPath()+witchpage;
       	if(CacheContainer.getMemory(url) != null) {
-      		return (Bitmap) CacheContainer.getMemory(url);
+     // 		return (Bitmap) CacheContainer.getMemory(url);
       	}
 
       	if(CacheContainer.getDisk(fileName) != null) {
-      		return (Bitmap) CacheContainer.getDisk(fileName);
+     		return (Bitmap) CacheContainer.getDisk(fileName);
       	}
 
         return getBitmap(index,mWidth,mHeight,witchpage);
@@ -125,14 +125,14 @@ public class ImageAsyncTask {
 				imageView.setImageBitmap(bitmap);
 
 				// Save the bitmap into memory and disk cache.
-
+/*
 				synchronized (CacheContainer.getMemoryCache()) {
 			     if (CacheContainer.getMemory(url) == null) {
 			    	 Log.d(TAG, "Here is Memory Put");
 			    	 CacheContainer.putMemory(url, bitmap);
 			     }			     
 				}
-				
+	*/
 				synchronized (CacheContainer.getDiskCache()) {
 			     if (CacheContainer.getDisk(fileName) == null) {
 			    	 Log.d(TAG, "Here is Disk Put");
