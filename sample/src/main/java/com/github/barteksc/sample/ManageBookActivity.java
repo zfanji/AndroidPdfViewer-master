@@ -29,7 +29,8 @@ import utils.FileUtil;
 public class ManageBookActivity extends Activity implements View.OnClickListener,IUserView {
 	private static final String TAG = "ManageBookActivity";
 	private static final boolean RANDOM_SIGNTIMES = false;
-	private static final String BOOK_PATH = "/sdcard/books";
+	private static final String BOOK_PATH = "/system/media/ebooks";
+	private static final String BOOK_PATH_DEBUG = "/sdcard/ebooks";
 	private Context mContext;
 
 
@@ -110,6 +111,9 @@ public class ManageBookActivity extends Activity implements View.OnClickListener
 
 	private void setBookData() {
 		ArrayList<File> imgFileList= FileUtil.GetPdfFiles(BOOK_PATH);
+		if(imgFileList.isEmpty()){
+			imgFileList= FileUtil.GetPdfFiles(BOOK_PATH_DEBUG);
+		}
 		ArrayList<Book> books=new ArrayList<>();
 		for (File file:imgFileList){
 			Log.d(TAG,"book path="+file.getAbsolutePath());
